@@ -1,2 +1,2 @@
-# ios-add-user
+# Ansible playbook - ios-add-user
 This Ansible playbook can be used to add a new user to Cisco IOS devices. The username / password in this example playbook are set as Cisco and need to be changed to your relevant username / password. Also new user is set as test1 as is the password. Again these need to be amended to the specfic username and password required. Finally the playbook is currently set to apply to all hosts in your inventory file. This can be changed to a single host or group as required
