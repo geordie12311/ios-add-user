@@ -1,0 +1,20 @@
+---
+- name: Configure new user on each device
+  hosts: all
+  gather_facts: false
+  connection: local
+
+  vars:
+    cli:
+      username: cisco
+      password: cisco
+
+  tasks:
+    - name: add user
+      ios_config:
+        provider: "{{ cli }}"
+        authorize: yes
+        lines:
+          - username test1 priv 15 password test1
+      register: print_output
+    -  debug: var=print_output
